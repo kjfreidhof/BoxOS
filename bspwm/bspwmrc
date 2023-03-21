@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d web II III IV V VI VII VIII IX X
+bspc monitor -d web term audio chat VM Vid Run SSH SH Bash
 
 bspc config border_width         2
 bspc config window_gap          12
