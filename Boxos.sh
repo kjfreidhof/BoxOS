@@ -22,7 +22,7 @@ pkg2="sudo pacman -S firefox flameshot dmenu obs-studio kdenlive pavucontrol vlc
 fed="sudo dnf install bspwm polybar sxhkd nitrogen picom terminator lxappearance -y"
 pkg3="sudo dnf install firefox flameshot dmenu obs-studio kdenlive pavucontrol vlc -y"
 Deb="sudo apt install bspwm polybar sxhkd nitrogen picom terminator lxappearance -y"
-pkg4="sudo apt install firefox flameshot dmenu obs-studio kdenlive pavucontrol vlc -y"
+pkg4="sudo apt install firefox-esr flameshot suckless-tools obs-studio kdenlive pavucontrol vlc -y"
 
 # Asks user what are you using 
 # and based on what they are using it will install the packages 
@@ -78,7 +78,7 @@ elif [ "$CHOICE" = 4 ]; then
 	for i in 5 
 	do
 		sleep $i
-		$deb
+		$Deb
 		sleep $i 
 		$pkg4
 		continue 
