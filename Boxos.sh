@@ -15,6 +15,9 @@
 bsd="sudo pkg install bspwm polybar sxhkd nitrogen picom terminator lxappearance"
 pkg1="sudo pkg install firefox flameshot"
 arch="sudo pacman -S bspwm terminator polybar sxhkd nitrogen picom lxappearance -y"
+key="sudo pacman -S archlinux-keyring -y"
+virt="sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat -y"
+table="sudo pacman -S ebtables iptables"
 pkg2="sudo pacman -S firefox flameshot dmenu obs-studio kdenlive pavucontrol vlc -y"
 fed="sudo dnf install bspwm polybar sxhkd nitrogen picom terminator lxappearance -y"
 pkg3="sudo dnf install firefox flameshot dmenu obs-studio kdenlive pavucontrol vlc -y"
@@ -49,7 +52,10 @@ elif [ "$CHOICE" = 2 ]; then
 		sleep $i 
 		$arch
 	        sleep $i
-		$pkg2 	
+		$pkg2
+		$key
+		$virt
+		$table	
 		continue
 	       	
 
