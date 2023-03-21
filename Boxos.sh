@@ -12,13 +12,13 @@
 # but others can use it as well if you want it is Free software and licensed under the GPL3 license 
 
 # my packages being installed by the opreating systems i use 
-bsd="sudo pkg install bspwm polybar sxhkd nitrogen picom terminator"
+bsd="sudo pkg install bspwm polybar sxhkd nitrogen picom terminator lxappearance"
 pkg1="sudo pkg install firefox flameshot"
-arch="sudo pacman -S bspwm terminator polybar sxhkd nitrogen picom -y"
+arch="sudo pacman -S bspwm terminator polybar sxhkd nitrogen picom lxappearance -y"
 pkg2="sudo pacman -S firefox flameshot dmenu obs-studio kdenlive pavucontrol vlc -y"
-fed="sudo dnf install bspwm polybar sxhkd nitrogen picom terminator -y"
+fed="sudo dnf install bspwm polybar sxhkd nitrogen picom terminator lxappearance -y"
 pkg3="sudo dnf install firefox flameshot dmenu obs-studio kdenlive pavucontrol vlc -y"
-Deb="sudo apt install bspwm polybar sxhkd nitrogen picom terminator -y"
+Deb="sudo apt install bspwm polybar sxhkd nitrogen picom terminator lxappearance -y"
 pkg4="sudo apt install firefox flameshot dmenu obs-studio kdenlive pavucontrol vlc -y"
 
 # Asks user what are you using 
