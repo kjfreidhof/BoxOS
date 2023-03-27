@@ -23,7 +23,8 @@ fed="sudo dnf install bspwm polybar sxhkd nitrogen picom terminator lxappearance
 pkg3="sudo dnf install firefox flameshot dmenu obs-studio kdenlive pavucontrol vlc -y"
 Deb="sudo apt install bspwm polybar sxhkd nitrogen picom terminator lxappearance -y"
 pkg4="sudo apt install firefox-esr flameshot suckless-tools obs-studio kdenlive pavucontrol vlc -y"
-
+sus="sudo zypper install bspwm polybar sxhkd nitrogen picom terminator lxappearance kitty -y"
+pkg5="sudo zypper install firefox flameshot suckless-tools obs-studio kdenlive pavucontrol vlc -y"
 # Asks user what are you using 
 # and based on what they are using it will install the packages 
 # based on the opreating system they choose so if they choose arch it will install for arch etc.
@@ -32,6 +33,7 @@ echo "1, Freebsd"
 echo "2, Arch"
 echo "3, Fedora"
 echo "4, Ubuntu/Debian"
+echo "5, Opensuse"
 
 read CHOICE
 
@@ -84,6 +86,19 @@ elif [ "$CHOICE" = 4 ]; then
 		continue 
 
 	done
+
+
+elif [ "$CHOICE" = 5 ]; then
+	while :
+	do
+		sleep 5
+		$sus
+		sleep 5
+		$pkg5
+		continue
+
+	done
+
 
 
 else

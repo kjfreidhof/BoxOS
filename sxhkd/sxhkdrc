@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	terminator
+	kitty
 
 # program launcher
-super + @space
-	dmenu_run
+super + r
+	rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -44,6 +44,16 @@ super + k
 # pavucontrol 
 super + p
 	pavucontrol 
+
+
+# Virt-manager 
+super + shift {v}
+	virt-manager 
+
+# Backup Browser incase something happens to firefox 
+super + shift {b}
+	 chromium 
+
 
 
 #
