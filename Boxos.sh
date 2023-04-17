@@ -22,20 +22,20 @@ pkg2="sudo pacman -S firefox flameshot dmenu obs-studio kdenlive pavucontrol vlc
 fed="sudo dnf install bspwm polybar sxhkd nitrogen picom terminator lxappearance -y"
 pkg3="sudo dnf install firefox flameshot dmenu obs-studio kdenlive pavucontrol vlc -y"
 Deb="sudo apt install bspwm polybar sxhkd nitrogen picom terminator lxappearance -y"
-pkg4="sudo apt install firefox-esr flameshot suckless-tools obs-studio kdenlive pavucontrol vlc -y"
+pkg4="sudo apt install rofi flameshot suckless-tools obs-studio kdenlive pavucontrol vlc -y"
 sus="sudo zypper install bspwm polybar sxhkd nitrogen picom terminator lxappearance kitty -y"
 pkg5="sudo zypper install firefox flameshot suckless-tools obs-studio kdenlive pavucontrol vlc -y"
 # Asks user what are you using 
 # and based on what they are using it will install the packages 
 # based on the opreating system they choose so if they choose arch it will install for arch etc.
-echo "What are you using?"
+
 echo "1, Freebsd"
 echo "2, Arch"
 echo "3, Fedora"
 echo "4, Ubuntu/Debian"
 echo "5, Opensuse"
 
-read CHOICE
+read -p "What are you using?: " CHOICE
 
 if [ "$CHOICE" = 1 ]; then
 	for i in 5
@@ -110,10 +110,49 @@ else
 fi
 
 # copies everything to the ~/.config/ directory
-cp * ~/.config/
+cp -r * ~/.config/
+
+
+if [ "$CHOICE" = 4 ]; then
+	for i in $pkg
+	do
+		su -c "apt install zsh -y"
+		continue
+
+	done 
+
+else 
+	exit 
+
+
+fi
+
+
+if ! which curl >> /dev/null; then 
+	echo "curl is not installed"
+	exit
+
+else
+	continue 
+
+fi 
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if ! which git >> /dev/null; then 
+	echo "git is not installed"
+	exit
+
+else 
+	continue 
+
+fi
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+
 exit
-
-
 
 
 
