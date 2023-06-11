@@ -1,0 +1,11 @@
+UUID=14E6-C23A    /run/media/14E6-C23A   vfat  defaults   0   0
+
+UUID=AA86-CF3A   /run/media/AA86-CF3A    vfat  defaults   0   0 
+
+#UUID=4E21-0000	/run/media/Ventoy1	exfat  defaults   0   0
+
+#UUID=7834-FBC2	/run/media/Ventoy2 	exfat  defaults   0   0
+
+UUID=A926-D28A	/run/media/A926-D28A	  vfat  defaults 
+
+UUID=A929-DDBC	/run/media/A929-DDBC  vfat   defaults  0   0 
